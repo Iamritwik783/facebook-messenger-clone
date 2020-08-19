@@ -1,18 +1,23 @@
 import React from 'react';
+import Button from '@material-ui/core/Button';
+import './Input.css'
 
 import './App.css';
 
 function App() {
   return (
-    <div>
+    <div >
 
-      <div id="input__tab">
+      <div className="input__tab">
         <form>
-        <input
-          placeholder="Enter your message...."
-        />
-        <button type="submit">Send Message</button>
+          <input className = "input__bar"
+            placeholder="Enter your message...."
+          />
+          <Button variant="outlined" color="primary">
+            Primary
+          </Button>
         </form>
+
       </div>
 
       <div>

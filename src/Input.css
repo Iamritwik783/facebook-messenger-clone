@@ -1,0 +1,13 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+.input__tab{
+    display: flex;
+    align-items:center;
+    justify-content: center;
+    margin-top: 50px;
+}
+.input__bar{
+    margin: 10px;
+}
