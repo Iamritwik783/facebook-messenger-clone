@@ -23,6 +23,9 @@ function App() {
     event.preventDefault();
 
     setMessages([...messages, { user: username, message: input }]);
+    
+    // clearing input tab
+    setInput('');
   }
 
 
