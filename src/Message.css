@@ -1,0 +1,27 @@
+.msg{
+    padding: 10px;
+    margin: 10px;
+    width: fit-content;
+}
+
+.msg__user{
+    display: flexbox;
+    text-align: left !important;
+    width: fit-content;
+    padding: 10px;
+    margin: 10px;
+    margin-left: auto;
+    justify-content: right;
+}
+
+.msg__usercard{
+    background-color: #0b81ff !important;
+}
+
+.msg__guestcard{
+    background-color: #e9e9eb !important;
+}
+.typo{
+    width: 400px;
+    padding: 10px;
+}

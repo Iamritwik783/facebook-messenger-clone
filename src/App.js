@@ -1,31 +1,24 @@
 import React, { useState, useEffect } from 'react';
 import Button from '@material-ui/core/Button';
 import './Input.css';
-import './Message.js'
+import './Message.js';
 import './App.css';
 import Message from './Message.js';
 
 function App() {
 
-  const [input, setInput] = useState('');
-  //console.log(input);
-
+  const [input, setInput] = useState(''); //console.log(input);
   const [messages, setMessages] = useState([{ user: "Sonu", message: "Hello" }, { user: "Khata", message: "Hi" }]);
-
   const [username, setUsername] = useState('');
 
-  useEffect(() => {
-    setUsername(prompt("Please enter your name: "));
-  }, [])
+  // useEffect is a hook that only runs when page loads
+  useEffect(() => {setUsername(prompt("Please enter your name: "));}, [])
 
   const sendMessage = (event) => {
-    //to stop the form, from reloading
-    event.preventDefault();
+    event.preventDefault();//to stop the form, from reloading
 
     setMessages([...messages, { user: username, message: input }]);
-    
-    // clearing input tab
-    setInput('');
+    setInput('');// clearing input tab
   }
 
 
@@ -53,28 +46,15 @@ function App() {
           </Button>
 
         </form>
-
       </div>
 
       <div>
-        {/* message */}
-
-        {
-          messages.map(
-            message => (
-              <Message
-                currentUser={username}
-                user={message.user}
-                message={message.message}
-              />
-            )
-          )
-        }
-
-
+        {messages.map(message => (<Message currentUser={username} user={message.user} message={message.message}/>))}
       </div>
     </div>
   );
+
+
 }
 
 export default App;
